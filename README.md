@@ -9,7 +9,7 @@ css/style.css
 js/main.js
 ```
 
-## Adding your Digital, Logos/Icons, and Entertainment work
+## Adding your Digital, Logos/Icons, and Packaging work
 Print already has your real pieces pulled from your old site. The other three
 categories are placeholder cards in `index.html` (search for `SLOT — 01`,
 `SLOT — 02`, `SLOT — 03`). To swap in real work:
