@@ -51,13 +51,50 @@
 
     <div class="tabs" role="tablist" aria-label="Filter work by category">
       <button class="tab active" data-filter="all">All</button>
-      <button class="tab" data-filter="print">Print</button>
       <button class="tab" data-filter="digital">Digital</button>
-      <button class="tab" data-filter="logos">Logos / Icons</button>
+      <button class="tab" data-filter="print">Print</button>
       <button class="tab" data-filter="packaging">Packaging</button>
+      <button class="tab" data-filter="logos">Logos / Icons</button>
     </div>
 
     <div class="work-grid" id="workGrid">
+
+      <!-- ======================================================
+           DIGITAL, PACKAGING
+           Each <img> src below points to a file in the /images
+           folder in your GitHub repo. To add more, copy an
+           <article class="work-card"> block and point its src at
+           the new filename (exact name, exact case, spaces
+           encoded as %20).
+      ======================================================= -->
+
+      <!-- Digital ads -->
+      <article class="work-card show" data-cat="digital">
+        <div class="frame"><img src="images/ElectroPop-meta-ads-042026_Artboard%202%20copy%2016.png" alt="ElectroPop Meta ad design" loading="lazy"></div>
+        <div class="meta"><span class="slate">DIGITAL AD</span><span class="cat">Digital</span></div>
+      </article>
+
+      <article class="work-card show" data-cat="digital">
+        <div class="frame"><img src="images/ElectroPop-meta-ads-042026_Artboard%202%20copy%2020.png" alt="ElectroPop Meta ad design" loading="lazy"></div>
+        <div class="meta"><span class="slate">DIGITAL AD</span><span class="cat">Digital</span></div>
+      </article>
+
+      <!-- Digital ebook / collateral -->
+      <article class="work-card show" data-cat="digital">
+        <div class="frame"><img src="images/OT-PCI-DSS-eBook.png" alt="OneTrust PCI DSS eBook design" loading="lazy"></div>
+        <div class="meta"><span class="slate">EBOOK</span><span class="cat">Digital</span></div>
+      </article>
+
+      <article class="work-card show" data-cat="digital">
+        <div class="frame"><img src="images/OT-Sales-guide.png" alt="OneTrust sales guide design" loading="lazy"></div>
+        <div class="meta"><span class="slate">SALES GUIDE</span><span class="cat">Digital</span></div>
+      </article>
+
+      <!-- Digital carousel -->
+      <article class="work-card show" data-cat="digital">
+        <div class="frame"><img src="images/OT-Carousels.png" alt="OneTrust social carousel design" loading="lazy"></div>
+        <div class="meta"><span class="slate">CAROUSEL</span><span class="cat">Digital</span></div>
+      </article>
 
       <!-- PRINT — real pieces from previous portfolio -->
       <article class="work-card show" data-cat="print">
@@ -90,27 +127,26 @@
         <div class="meta"><span class="slate">QES-BAR</span><span class="cat">Print</span></div>
       </article>
 
-      <article class="work-card show" data-cat="print">
-        <div class="frame"><img src="https://images.squarespace-cdn.com/content/v1/54b6ebb8e4b0567044abc36b/1738860943681-FEEXNV5C23JDW6R0IFH2/QUANTUM-boxes.png" alt="Quantum packaging design" loading="lazy"></div>
-        <div class="meta"><span class="slate">QTM-BOX</span><span class="cat">Print</span></div>
+      <!-- PACKAGING -->
+      <article class="work-card show" data-cat="packaging">
+        <div class="frame"><img src="images/ElectroPop-electrolyte-lollipops-variety-6-front-2-pack.png" alt="ElectroPop variety 6-pack packaging" loading="lazy"></div>
+        <div class="meta"><span class="slate">ELECTROPOP</span><span class="cat">Packaging</span></div>
       </article>
 
-      <!-- DIGITAL — placeholder, no images migrated yet -->
-      <article class="work-card show placeholder" data-cat="digital">
-        <div class="frame"><p>DIGITAL WORK<br>Add screens from the<br>Windows.com rebuild<br>and other web projects here</p></div>
-        <div class="meta"><span class="slate">SLOT — 01</span><span class="cat">Digital</span></div>
+      <article class="work-card show" data-cat="packaging">
+        <div class="frame"><img src="images/Electropop-electrolyte-lollipops-watermelon-splash-front-HERO-MULTI-new.png" alt="ElectroPop watermelon splash packaging" loading="lazy"></div>
+        <div class="meta"><span class="slate">ELECTROPOP</span><span class="cat">Packaging</span></div>
       </article>
 
-      <!-- LOGOS / ICONS — placeholder -->
+      <article class="work-card show" data-cat="packaging">
+        <div class="frame"><img src="images/QUANTUM-boxes.png" alt="Quantum packaging design" loading="lazy"></div>
+        <div class="meta"><span class="slate">QTM-BOX</span><span class="cat">Packaging</span></div>
+      </article>
+
+      <!-- LOGOS / ICONS — placeholder, none uploaded yet -->
       <article class="work-card show placeholder" data-cat="logos">
         <div class="frame"><p>LOGOS &amp; ICONS<br>Add identity and<br>mark work here</p></div>
         <div class="meta"><span class="slate">SLOT — 02</span><span class="cat">Logos / Icons</span></div>
-      </article>
-
-      <!-- PACKAGING — placeholder -->
-      <article class="work-card show placeholder" data-cat="packaging">
-        <div class="frame"><p>PACKAGING<br>Add ElectroPop and other<br>packaging work here</p></div>
-        <div class="meta"><span class="slate">SLOT — 03</span><span class="cat">Packaging</span></div>
       </article>
 
     </div>
