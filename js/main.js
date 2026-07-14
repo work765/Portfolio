@@ -39,7 +39,6 @@ tabs.forEach(tab => {
 // ---------- Lightbox ----------
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
-const lightboxSlate = document.getElementById('lightboxSlate');
 const lightboxCat = document.getElementById('lightboxCat');
 const lightboxClose = document.getElementById('lightboxClose');
 const lightboxPrev = document.getElementById('lightboxPrev');
@@ -48,8 +47,8 @@ const lightboxNext = document.getElementById('lightboxNext');
 let currentIndex = 0;
 
 function visibleWorkCards() {
-  // Only cards currently shown (respects active category filter) and not placeholders
-  return Array.from(document.querySelectorAll('.work-card.show:not(.placeholder)'));
+  // Only shown, non-placeholder, non-video cards (videos play inline with native controls)
+  return Array.from(document.querySelectorAll('.work-card.show:not(.placeholder):not(.video-card)'));
 }
 
 function openLightbox(card) {
@@ -69,12 +68,10 @@ function showLightboxItem() {
 
   const card = items[currentIndex];
   const img = card.querySelector('img');
-  const slate = card.querySelector('.slate');
   const cat = card.querySelector('.cat');
 
   lightboxImg.src = img.src;
   lightboxImg.alt = img.alt || '';
-  lightboxSlate.textContent = slate ? slate.textContent : '';
   lightboxCat.textContent = cat ? cat.textContent : '';
 }
 
@@ -84,7 +81,7 @@ function closeLightbox() {
 }
 
 cards.forEach(card => {
-  if (card.classList.contains('placeholder')) return;
+  if (card.classList.contains('placeholder') || card.classList.contains('video-card')) return;
   card.addEventListener('click', () => openLightbox(card));
 });
 

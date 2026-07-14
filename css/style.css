@@ -283,7 +283,7 @@ section { padding: clamp(4rem, 10vw, 7rem) 0; }
 
 .work-card.show { display: block; }
 
-.work-card:not(.placeholder) { cursor: zoom-in; }
+.work-card:not(.placeholder):not(.video-card) { cursor: zoom-in; }
 
 .work-card .frame {
   overflow: hidden;
@@ -296,21 +296,19 @@ section { padding: clamp(4rem, 10vw, 7rem) 0; }
   transition: transform 0.5s ease;
 }
 
-.work-card:not(.placeholder):hover .frame img { transform: scale(1.03); }
+.work-card .frame video {
+  width: 100%; height: auto; display: block;
+  background: #0f0e13;
+}
+
+.work-card:not(.placeholder):not(.video-card):hover .frame img { transform: scale(1.03); }
 
 .work-card .meta {
   padding: 0.95rem 1.1rem 1.1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 0.75rem;
-}
-
-.work-card .slate {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-  color: var(--slate);
 }
 
 .work-card .cat {
