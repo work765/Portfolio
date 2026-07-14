@@ -283,22 +283,31 @@ section { padding: clamp(4rem, 10vw, 7rem) 0; }
 
 .work-card.show { display: block; }
 
-.work-card:not(.placeholder):not(.video-card) { cursor: zoom-in; }
+.work-card:not(.placeholder):not(.video-card) { 
+    cursor: zoom-in; 
+}
 
 .work-card .frame {
-  overflow: hidden;
-  background: #0f0e13;
-  display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #0f0e13;
+    display: flex;
 }
 
 .work-card .frame img {
-  width: 100%; height: auto; display: block;
-  transition: transform 0.5s ease;
+    width: 100%; 
+    height: auto; 
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
 .work-card .frame video {
-  width: 100%; height: auto; display: block;
-  background: #0f0e13;
+    width: 100%; 
+    height: auto; 
+    display: block;
+    background: #0f0e13;
 }
 
 .work-card:not(.placeholder):not(.video-card):hover .frame img { transform: scale(1.03); }
