@@ -289,6 +289,7 @@ section { padding: clamp(4rem, 10vw, 7rem) 0; }
 
 .work-card .frame {
     width: 100%;
+    aspect-ratio: 4 / 3; /* <--- ADD THIS LINE (Change 4/3 to 16/10 or whatever shape your images are) */
     overflow: hidden;
     position: relative;
     background: #0f0e13;
