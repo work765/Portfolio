@@ -267,21 +267,26 @@ section { padding: clamp(4rem, 10vw, 7rem) 0; }
 .tab.active { background: var(--paper); color: var(--ink); border-color: var(--paper); }
 
 .work-grid {
-  columns: 3 300px;
-  column-gap: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.75rem;
+    align-items: start;
 }
 
 .work-card {
-  background: var(--ink-soft);
-  border: 1px solid var(--line);
-  border-radius: 3px;
-  overflow: hidden;
-  display: none;
-  break-inside: avoid;
-  margin-bottom: 1.75rem;
+    background: var(--ink-soft);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    overflow: hidden;
+    display: none; /* Keeps your JS working perfectly */
+    /* Remove break-inside: avoid; */
+    /* Remove margin-bottom: 1.75rem; (The grid gap handles this now) */
 }
 
-.work-card.show { display: block; }
+.work-card.show {
+    display: flex;
+    flex-direction: column;
+}
 
 .work-card:not(.placeholder):not(.video-card) { 
     cursor: zoom-in; 
